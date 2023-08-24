@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-open" version="1.1.0">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-open" version="1.1.1">
   <name>Open</name>
   <description>Open audio, video, images and more with applications installed on the user's device</description>
   <license>MIT</license>
@@ -34,6 +34,12 @@
     <source-file src="src/ios/Open.m"/>
     <header-file src="src/ios/Open.h"/>
   </platform>
-  <dependency id="cordova-plugin-file"/>
-  <dependency id="cordova-plugin-file-transfer"/>
+  <dependency id="cordova-plugin-file" version="8.0.0"/>
+  <dependency id="cordova-plugin-file-transfer" version="2.0.0-dev" url="https://github.com/apache/cordova-plugin-file-transfer"/>
+  <engines>
+    <engine name="cordova" version=">=12.0.0" />
+    <engine name="cordova-android" version=">=12.0.0" />
+    <engine name="cordova-ios" version=">=7.0.0" />
+  </engines>
+
 </plugin>

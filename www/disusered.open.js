@@ -42,9 +42,7 @@ exports.open = function(uri, success, error, progress, trustAllCertificates) {
  */
 function downloadAndOpen(url, success, error, progress, trustAllCertificates) {
   var ft = new FileTransfer();
-  var ios = cordova.file.cacheDirectory;
-  var ext = cordova.file.externalCacheDirectory;
-  var dir = (ext) ? ext : ios;
+  var dir = cordova.file.cacheDirectory;
   var name = url.substring(url.lastIndexOf('/') + 1);
   var path = dir + name;
 
@@ -59,7 +57,7 @@ function downloadAndOpen(url, success, error, progress, trustAllCertificates) {
 
   ft.download(url, path,
       function done(entry) {
-        var file = entry.toURL();
+        var file = entry.nativeURL;
         exec(onSuccess.bind(this, file, success),
              onError.bind(this, error), 'Open', 'open', [file]);
       },
