@@ -35,7 +35,7 @@
     <header-file src="src/ios/Open.h"/>
   </platform>
   <dependency id="cordova-plugin-file" version="8.0.0"/>
-  <dependency id="cordova-plugin-file-transfer" version="2.0.0-dev" url="https://github.com/apache/cordova-plugin-file-transfer"/>
+  <dependency id="cordova-plugin-file-transfer" version="2.0.0" url="https://github.com/apache/cordova-plugin-file-transfer"/>
   <engines>
     <engine name="cordova" version=">=12.0.0" />
     <engine name="cordova-android" version=">=12.0.0" />
