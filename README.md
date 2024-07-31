@@ -7,6 +7,11 @@ cordova-open
 
 <img src="https://raw.githubusercontent.com/disusered/cordova-open/docs/open.png" width="300px" />
 
+##version history
+
+1.2 Android: move file to download folder and open then for api >= 29
+
+
 ## Install
 
 ```bash

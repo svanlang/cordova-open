@@ -42,7 +42,15 @@ exports.open = function(uri, success, error, progress, trustAllCertificates) {
  */
 function downloadAndOpen(url, success, error, progress, trustAllCertificates) {
   var ft = new FileTransfer();
-  var dir = cordova.file.cacheDirectory;
+  if ( device.platform === 'Android' && parseInt( device.sdkVersion,10) > 28 )
+  {
+    var dir = cordova.file.dataDirectory;
+  }
+  else
+  {
+   var dir = cordova.file.cacheDirectory;
+  }
+
   var name = url.substring(url.lastIndexOf('/') + 1);
   var path = dir + name;
 
