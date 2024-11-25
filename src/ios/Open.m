@@ -24,14 +24,15 @@
           [url checkResourceIsReachableAndReturnError:&err] == YES) {
 
         self.fileUrl = url;
-
-        QLPreviewController *previewCtrl = [[QLPreviewController alloc] init];
-        previewCtrl.delegate = self;
-        previewCtrl.dataSource = self;
-          
-        [previewCtrl.navigationItem setRightBarButtonItem:nil];
-          
+        
         dispatch_async(dispatch_get_main_queue(), ^{
+
+          QLPreviewController *previewCtrl = [[QLPreviewController alloc] init];
+          previewCtrl.delegate = self;
+          previewCtrl.dataSource = self;
+            
+          [previewCtrl.navigationItem setRightBarButtonItem:nil];
+       
           [self.viewController presentViewController:previewCtrl animated:YES completion:nil];
         });
 
